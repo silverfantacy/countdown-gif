@@ -6,7 +6,7 @@ const GIFEncoder = require('gifencoder');
 const { Canvas, registerFont } = require('canvas');
 const moment = require('moment');
 
-registerFont('../fonts/NotoSansTC-Medium.ttf', { family: 'Noto Sans TC' });
+registerFont(path.join(process.cwd(), 'fonts', 'NotoSansTC-Medium.ttf'), { family: 'Noto Sans TC' });
 
 module.exports = {
   /**
