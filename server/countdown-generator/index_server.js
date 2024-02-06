@@ -3,8 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 const GIFEncoder = require('gifencoder');
-const { Canvas } = require('canvas');
+const { Canvas, registerFont } = require('canvas');
 const moment = require('moment');
+
+registerFont('../fonts/NotoSansTC-Medium.ttf', { family: 'Noto Sans TC' });
 
 module.exports = {
   /**
@@ -131,7 +133,7 @@ module.exports = {
           ctx.textAlign = "center";
           ctx.font = `${numSize}px blod Arial`;
           ctx.fillText(timeData[i], i * (rectWidth + 10) + rectWidth / 2, rectHeight / 2 - 10);
-          ctx.font = `${textSize}px Noto Sans CJK TC`;
+          ctx.font = `${textSize}px "Noto Sans TC"`;
           ctx.fillText(timeUnits[i], i * (rectWidth + 10) + rectWidth / 2, rectHeight / 2 + numSize - 15);
         }
         enc.addFrame(ctx);
