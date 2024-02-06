@@ -9,7 +9,7 @@ const tmpDir = __dirname + '/tmp/';
 const publicDir = __dirname + '/public/';
 
 // canvas generator
-const CountdownGenerator = require('./countdown-generator');
+const CountdownGenerator = require('./countdown-generator/index_server.js');
 
 app.use(express.static(publicDir));
 app.use(express.static(tmpDir));
